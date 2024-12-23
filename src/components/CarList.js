@@ -5,15 +5,6 @@ import { removeCar } from "../store";
 function CarList() {
   const dispatch = useDispatch();
 
-  // const memoizedCars = createSelector(
-  //   [(state) => state.cars.data, (state) => state.cars.searchTerm],
-  //   (data, searchTerm) => {
-  //     return data.filter((car) =>
-  //       car.name.toString().includes(searchTerm.toString())
-  //     );
-  //   }
-  // );
-
   const memoizedCars = createSelector(
     [(state) => state.cars.data, (state) => state.cars.searchTerm],
     (data, searchTerm) => {
